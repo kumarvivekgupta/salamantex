@@ -1,0 +1,35 @@
+<div>
+  <mat-card>
+    <form [formGroup]="userForm" (ngSubmit)="userForm.valid && onSubmit()">
+
+
+      <mat-form-field class="w-50 px-4">
+        <input matInput autocomplete="off" placeholder="Name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="w-50 px-4">
+        <input matInput autocomplete="off" placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="w-50 px-4">
+        <input matInput autocomplete="off" placeholder="Description" formControlName="desc">
+      </mat-form-field>
+      <mat-form-field class="w-50 px-4">
+        <input matInput autocomplete="off" placeholder="Max Balance" formControlName="max">
+      </mat-form-field><mat-form-field class="w-50 px-4">
+      <input matInput autocomplete="off" placeholder="Bitcoin Balance" formControlName="bitBalance">
+    </mat-form-field>
+      <mat-form-field class="w-50 px-4">
+        <input matInput autocomplete="off" placeholder="Ethereum Balance" formControlName="ethBalance">
+      </mat-form-field>
+
+
+
+      <div style="display: flex;
+    justify-content: center;">
+        <button mat-raised-button class="button-osler" type="submit">
+          Save
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
