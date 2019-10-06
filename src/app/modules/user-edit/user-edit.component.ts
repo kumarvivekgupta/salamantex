@@ -44,6 +44,7 @@ export class UserEditComponent implements OnInit {
   }
 
   onSubmit() {
+    // API calling of form and submit user detail
   }
 
 }

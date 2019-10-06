@@ -11,13 +11,15 @@ import {SalamantexApi} from './modules/core/services/salamantex.api';
 import {UserEditComponent} from './modules/user-edit/user-edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {UserDetailComponent} from './modules/user-detail/user-detail.component';
+import {TransactionListComponent} from './modules/transaction-list/transaction-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserEditComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    TransactionListComponent
   ],
   imports: [
     BrowserModule,

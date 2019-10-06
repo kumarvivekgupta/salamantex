@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <meta charset = "UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<h1 style="font-size: 25px;color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;">Transaction History</h1>
 
-</body>
-</html>
+<table style = "width: 100%;" mat-table [dataSource] = "transList" class = "mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef = "id">
+    <th mat-header-cell *matHeaderCellDef> Id</th>
+    <td mat-cell *matCellDef = "let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef = "balance">
+    <th mat-header-cell *matHeaderCellDef> Amount</th>
+    <td mat-cell *matCellDef = "let element"> {{element.amount}} </td>
+  </ng-container>
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef = "to">
+    <th mat-header-cell *matHeaderCellDef> Sender Id</th>
+    <td mat-cell *matCellDef = "let element"> {{element.sender_id}} </td>
+
+  </ng-container>
+
+  <ng-container matColumnDef = "from">
+    <th mat-header-cell *matHeaderCellDef> Reciever Id</th>
+    <td mat-cell *matCellDef = "let element"> {{element.recieve_id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef = "type">
+    <th mat-header-cell *matHeaderCellDef> Actions</th>
+    <td mat-cell *matCellDef = "let element"> {{element.type}} </td>
+
+  </ng-container>
+
+  <ng-container matColumnDef = "state">
+    <th mat-header-cell *matHeaderCellDef> Actions</th>
+    <td mat-cell *matCellDef = "let element"> {{element.state}} </td>
+
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
+  <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
+</table>
+

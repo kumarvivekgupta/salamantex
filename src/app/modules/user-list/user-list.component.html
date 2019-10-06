@@ -1,3 +1,9 @@
+
+<h1 style="font-size: 25px;color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;">User List</h1>
+
 <table style = "width: 100%;" mat-table [dataSource] = "userList" class = "mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
@@ -36,6 +42,12 @@
                 matTooltip = "Edit"
                 matTooltipPosition = "below">
         edit
+      </mat-icon>
+      <mat-icon class = "action-icon"
+                routerLink = "/users-list/{{element.id}}/detail"
+                matTooltip = "Detail"
+                matTooltipPosition = "below">
+        feedback
       </mat-icon>
     </td>
   </ng-container>
