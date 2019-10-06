@@ -10,12 +10,14 @@ import {UserListComponent} from './modules/user-list/user-list.component';
 import {SalamantexApi} from './modules/core/services/salamantex.api';
 import {UserEditComponent} from './modules/user-edit/user-edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {UserDetailComponent} from './modules/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserEditComponent
+    UserEditComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

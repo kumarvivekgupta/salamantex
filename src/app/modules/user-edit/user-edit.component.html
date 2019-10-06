@@ -1,18 +1,25 @@
 <div>
-  <mat-card>
+  <h1 style="font-size: 25px;color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;">Edit</h1>
+<!--  <h1 style="font-size: 25px;color: orange;-->
+<!--    display: flex;-->
+<!--    justify-content: center;-->
+<!--    margin-top: 10px;">Detail</h1>-->
+
+  <mat-card class="form-user">
     <form [formGroup]="userForm" (ngSubmit)="userForm.valid && onSubmit()">
 
 
       <mat-form-field class="w-50 px-4">
-        <input matInput autocomplete="off" placeholder="Name" formControlName="name">
+        <input matInput autocomplete="off"  placeholder="Name" formControlName="name">
       </mat-form-field>
 
       <mat-form-field class="w-50 px-4">
-        <input matInput autocomplete="off" placeholder="Email" formControlName="email">
+        <input matInput autocomplete="off"  placeholder="Email" formControlName="email">
       </mat-form-field>
-      <mat-form-field class="w-50 px-4">
-        <input matInput autocomplete="off" placeholder="Description" formControlName="desc">
-      </mat-form-field>
+
       <mat-form-field class="w-50 px-4">
         <input matInput autocomplete="off" placeholder="Max Balance" formControlName="max">
       </mat-form-field><mat-form-field class="w-50 px-4">
@@ -20,6 +27,9 @@
     </mat-form-field>
       <mat-form-field class="w-50 px-4">
         <input matInput autocomplete="off" placeholder="Ethereum Balance" formControlName="ethBalance">
+      </mat-form-field>
+      <mat-form-field class="w-100 px-4">
+        <input matInput autocomplete="off" placeholder="Description" formControlName="desc">
       </mat-form-field>
 
 

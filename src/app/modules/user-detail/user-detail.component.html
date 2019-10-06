@@ -1,0 +1,43 @@
+<mat-card class = "user-details-card osler-data-card osler-card-width-50 osler-card-padding">
+  <div class = "user-details__title">
+    <h3 style="font-size: 25px;color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;">{{data.name | uppercase}}</h3>
+    <span class = "detail-card__title-span"></span>
+    <mat-icon
+      routerLink = "/users-list/{{userId}}/edit"
+      matTooltip = "Edit"
+              class = "action-icon" matTooltipClass = "osler-tooltip action__tooltip">
+      edit
+    </mat-icon>
+  </div>
+
+  <table class = "user-details__table">
+    <tr>
+      <th>User Name</th>
+      <td>{{ data.name }}</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>{{data.email}}</td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>{{data.desc}}</td>
+    </tr>
+    <tr>
+      <th>Max Transaction</th>
+      <td>{{ data.max }}</td>
+    </tr>
+    <tr>
+      <th>Bitcoin Balance</th>
+      <td>{{ data.wallet[0].bal}}</td>
+    </tr>
+    <tr>
+      <th>Ethereum Balance</th>
+      <td>{{ data.wallet[1].bal  }}</td>
+    </tr>
+  </table>
+</mat-card>
+
